@@ -8,8 +8,26 @@ import {
   ToolCaseIcon,
   UserIcon,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Sidebar() {
+  const link = [
+    {
+      id: "linkedIn",
+      file: "linkedIn.svg",
+      ref: "https://linkedin.com/in/MasieJr",
+    },
+    {
+      id: "github",
+      file: "github.svg",
+      ref: "https://github.com/MasieJr",
+    },
+    {
+      id: "email",
+      file: "email.svg",
+      ref: "mailto:masie@masiseremu.co.za",
+    },
+  ];
   const tabs = [
     {
       id: "#home",
@@ -101,6 +119,29 @@ export default function Sidebar() {
             </div>
           </a>
         ))}
+
+        <div className="space-y-3">
+          <div className="flex flex-row items-center space-x-3">
+            <div className="bg-red-500 w-3 h-3  rounded-full"></div>
+            <p className="handwritten text-2xl">
+              Available for new Opportunies{" "}
+            </p>
+          </div>
+          <p className="code-font">Lets buld something impectful</p>
+        </div>
+
+        <div className="flex flex-row justify-around w-[150]">
+          {link.map((l) => (
+            <a
+              key={l.id}
+              href={l.ref}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src={l.file} alt={l.id} width={30} height={30} priority />
+            </a>
+          ))}
+        </div>
       </nav>
     </div>
   );
