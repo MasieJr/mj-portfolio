@@ -9,6 +9,7 @@ import {
   UserIcon,
 } from "lucide-react";
 import Image from "next/image";
+import StickyNote from "../StickyNote";
 
 export default function Sidebar() {
   const link = [
@@ -74,7 +75,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="w-[300px] flex flex-col pt-16 pb-10">
+    <div className="w-[300px] flex flex-col pt-16 pb-10 shadow-[10px_0_15px_-5px_rgba(0,0,0,0.3)]">
       {/* Header Section */}
       <div className="px-10">
         <h1 className="handwritten text-7xl text-gray-900 leading-none">
@@ -119,6 +120,8 @@ export default function Sidebar() {
             </div>
           </a>
         ))}
+
+        <StickyNote />
 
         <div className="space-y-3">
           <div className="flex flex-row items-center space-x-3">

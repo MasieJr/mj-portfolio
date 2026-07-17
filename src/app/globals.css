@@ -60,6 +60,25 @@ body::after {
   pointer-events: none;
 }
 
+.sticky::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.6)),
+    url("/textures/sticky.webp");
+
+  background-size: cover, 600px;
+
+  background-repeat: no-repeat, repeat;
+
+  opacity: 0.5;
+
+  z-index: -2;
+  pointer-events: none;
+}
+
 .heading-font {
   font-family: var(--font-heading);
 }
