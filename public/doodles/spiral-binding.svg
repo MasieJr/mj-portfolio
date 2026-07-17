@@ -1,0 +1,13 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hole shadow/depth to give the paper thickness -->
+  <ellipse cx="25" cy="20" rx="6" ry="7" fill="#cfc7b8" />
+  
+  <!-- The dark inside of the punched hole -->
+  <ellipse cx="23" cy="20" rx="5" ry="6" fill="#3a352d" />
+  
+  <!-- The metallic spiral wire looping in -->
+  <path d="M -5 15 C 10 15, 18 13, 23 17 C 27 20, 24 25, 20 24" fill="none" stroke="#b5b0a6" stroke-width="4" stroke-linecap="round" />
+  
+  <!-- A subtle white highlight to make the wire look 3D and metallic -->
+  <path d="M -5 14 C 10 14, 18 12, 23 16" fill="none" stroke="#fcfbfa" stroke-width="1.5" />
+</svg>
