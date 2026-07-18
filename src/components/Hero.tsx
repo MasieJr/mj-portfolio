@@ -1,12 +1,31 @@
+"use client";
+
 import { RoughNotation } from "react-rough-notation";
 import SketchyLine from "./SketchyLine";
 import StickyNote from "./StickyNote";
-import { ArrowBigRight, ArrowRight, Download, Pen } from "lucide-react";
+import {
+  ArrowRight,
+  Code,
+  CodeXml,
+  Computer,
+  Database,
+  Download,
+  Monitor,
+  Pen,
+  Smartphone,
+  Star,
+  Terminal,
+  TerminalSquare,
+} from "lucide-react";
+import PaperButton from "./PaperButton";
+import Image from "next/image";
+import IconText from "./IconText";
+import TextHeading from "./TextHeading";
 
 export default function Hero() {
   return (
-    <section id="home" className="mt-10">
-      <div className="flex justufy-around">
+    <section id="home" className="mt-10 space-y-20">
+      <div className="flex justufy-around space-x-5">
         <div className="space-y-10">
           <RoughNotation
             animationDuration={1000}
@@ -40,53 +59,84 @@ export default function Hero() {
             </RoughNotation>
           </div>
           <div className="flex mt-25 justify-around ">
-            <button
-              className={`group relative inline-flex items-center gap-2 text-[var(--foreground)] transition-colors hover:text-gray-600`}
-            >
-              <span className="code-font text-sm">Download</span>
-              <span className="transition-transform group-hover:translate-x-1">
-                <ArrowRight />
-              </span>
-
-              {/* The hand-drawn underline that thickens on hover */}
-              <svg
-                className="absolute -bottom-1 left-0 w-full h-[3px] text-gray-400 group-hover:text-[var(--foreground)] transition-colors"
-                preserveAspectRatio="none"
-                viewBox="0 0 100 10"
-                fill="none"
-              >
-                <path
-                  d="M2 5 C 30 3, 70 7, 98 5"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </button>
-            <button
-              className={`
-        group relative inline-flex items-center justify-center gap-3 
-        px-6 py-3 rounded-md
-        bg-[var(--foreground)] text-[var(--background)] 
-        code-font text-sm tracking-wide
-        border-2 border-[var(--foreground)]
-        transition-all duration-150 ease-in-out
-        /* The magic: A solid offset shadow that looks like physical paper depth */
-        hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_0px_#e9420b]
-        /* The click: Snaps flat against the page */
-        active:translate-y-0 active:translate-x-0 active:shadow-none
-       
-      `}
-            >
-              Download
-              <span className="transition-transform group-hover:translate-x-1">
-                <Download />
-              </span>
-            </button>
-            <button>Get in touch</button>
+            <PaperButton
+              label="View My work"
+              onClick={() => {}}
+              icon={ArrowRight}
+            />
+            <PaperButton
+              label="Download CV"
+              onClick={() => {}}
+              icon={Download}
+            />
+            <PaperButton
+              label="Get In Touch"
+              onClick={() => {}}
+              icon={ArrowRight}
+            />
           </div>
         </div>
-        <StickyNote />
+        <div className="space-y-15 code-font">
+          <StickyNote />
+          <div className="handwritten">
+            <p className="text-l">Favourite transport:</p>
+            <RoughNotation
+              animate={false}
+              type="underline"
+              show={true}
+              color="#ed0000"
+            >
+              <span className="text-s">trains</span>
+            </RoughNotation>
+            <Image
+              src="/doodles/train1.svg"
+              alt="train"
+              width={200}
+              height={200}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="flex">
+        <div className="space-y-5">
+          <TextHeading heading="What I Enjoy building with:" />
+          <div className="grid grid-cols-2 space-y-5">
+            <IconText
+              label="Languages"
+              list="Javascript, Typescript, Java, C#, C++, Dart..."
+              icon={CodeXml}
+            />
+            <IconText
+              label="Backend"
+              list="Node.js, Express, RestAPI, WebSockets, Databases..."
+              icon={Database}
+            />
+            <IconText
+              label="FrontEnd"
+              list="React, Html, CSS, Tailwind CSS..."
+              icon={Monitor}
+            />
+            <IconText
+              label="Mobile"
+              list="Flutter, React Native, Android Studio..."
+              icon={Smartphone}
+            />
+            <IconText
+              label="Tools"
+              list="Git, VS Code, Postman, Github..."
+              icon={TerminalSquare}
+            />
+            <IconText label="Other" list="Cloudfare, Vercel..." icon={Star} />
+          </div>
+        </div>
+        <div>
+          <TextHeading heading="A little about me" />
+          <p className="handwritten">
+            I am a computer Science graduate who loves solving problems,
+            building products and learning new technologies. I enjoy turning
+            idea into real-world solutions that makes a difference.
+          </p>
+        </div>
       </div>
     </section>
   );
