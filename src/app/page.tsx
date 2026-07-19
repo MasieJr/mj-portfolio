@@ -10,7 +10,7 @@ export default function Home() {
         <div className="absolute left-0 top-0 bottom-0 w-[40px] bg-[url('/doodles/spiral-binding.svg')] bg-repeat-y" />
         <div className="flex ">
           <NavBar />
-          <div className="mx-20 mb-10 mt-30">
+          <div className="sm:mx-20 mb-10 sm:mt-30">
             <Hero />
           </div>
         </div>

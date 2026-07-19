@@ -75,7 +75,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="w-[300px] flex flex-col pt-16 pb-10 shadow-[10px_0_15px_-5px_rgba(0,0,0,0.3)]">
+    <div className="w-[300px] hidden md:flex flex-col pt-16 pb-10 shadow-[10px_0_15px_-5px_rgba(0,0,0,0.3)]">
       {/* Header Section */}
       <div className="px-10">
         <h1 className="handwritten text-7xl text-gray-900 leading-none">

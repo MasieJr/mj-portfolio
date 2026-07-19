@@ -13,7 +13,7 @@ export default function PaperButton({
 }: PaperButtonProps) {
   return (
     <button
-      className="text-gray-800 font-semibold py-3 px-6 rounded-lg  shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-[5px] active:translate-y-[5px] active:shadow-none transition-all"
+      className="handwritten text-gray-800 font-semibold py-3 px-6 rounded-lg  shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-[5px] active:translate-y-[5px] active:shadow-none transition-all"
       onClick={onClick}
     >
       <div className="flex space-x-3">
