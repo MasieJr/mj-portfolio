@@ -98,7 +98,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="flex">
-        <div className="space-y-5">
+        <div className="space-y-5 w-[48%]">
           <TextHeading heading="What I Enjoy building with:" />
           <div className="grid grid-cols-2 space-y-5">
             <IconText
@@ -129,13 +129,36 @@ export default function Hero() {
             <IconText label="Other" list="Cloudfare, Vercel..." icon={Star} />
           </div>
         </div>
-        <div>
+        <div className="space-y-5 w-[48%]">
           <TextHeading heading="A little about me" />
-          <p className="handwritten">
+          <p className="code-font text-xl ">
             I am a computer Science graduate who loves solving problems,
             building products and learning new technologies. I enjoy turning
             idea into real-world solutions that makes a difference.
           </p>
+          <div className="flex space-x-5">
+            <h1 className="handwritten self-end text-5xl">
+              <RoughNotation
+                animationDuration={1000}
+                type="box"
+                show={true}
+                color="#ed0000"
+              >
+                m.seremu
+              </RoughNotation>
+            </h1>
+            <div className="flex flex-col note-page bg-white w-[450px] h-[250px] rotate-3 items-center text-gray-500">
+              <h3 className="handwritten text-5xl">
+                Currently thinking about:
+              </h3>
+              <ol className="code-font text-3xl list-disc pl-5 ">
+                <li>Trains</li>
+                <li>Coffee</li>
+                <li>npm run dev</li>
+                <li>console.log(error)</li>
+              </ol>
+            </div>
+          </div>
         </div>
       </div>
     </section>

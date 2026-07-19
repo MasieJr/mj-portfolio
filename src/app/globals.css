@@ -60,22 +60,98 @@ body::after {
   pointer-events: none;
 }
 
+.sticky {
+  position: relative; /* Lock the pseudo-element to this specific container */
+  background-color: #fef08a; /* A solid yellow base color (Tailwind yellow-200) */
+}
+
 .sticky::before {
   content: "";
-  position: fixed;
+  position: absolute; /* Absolute instead of fixed so it fills just the note */
   inset: 0;
 
-  background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.6)),
-    url("/textures/sticky.webp");
+  /* Blending the sticky texture with the solid background color */
+  background: url("/textures/sticky.webp");
+  background-size: 600px;
+  background-repeat: repeat;
 
-  background-size: cover, 600px;
+  opacity: 0.8; /* Adjusted so the texture details pop without overpowering text */
+  mix-blend-mode: multiply; /* Perfect for overlaying paper textures on color */
 
-  background-repeat: no-repeat, repeat;
+  z-index: 0; /* Keep it behind text, but above the main body background */
+  pointer-events: none;
+}
+.footy {
+  position: relative; /* Lock the pseudo-element to this specific container */
+  background-color: #fafafa00; /* A solid yellow base color (Tailwind yellow-200) */
+}
+
+.footy::before {
+  content: "";
+  position: absolute; /* Absolute instead of fixed so it fills just the note */
+  inset: 0;
+
+  /* Blending the sticky texture with the solid background color */
+  background: url("/textures/foot.webp");
+  background-size: 100%;
+  /* background-repeat: repeat; */
+
+  opacity: 1; /* Adjusted so the texture details pop without overpowering text */
+  mix-blend-mode: multiply; /* Perfect for overlaying paper textures on color */
+
+  z-index: 0; /* Keep it behind text, but above the main body background */
+  pointer-events: none;
+}
+
+/* --- Project Card / Note Page Style --- */
+.note-page {
+  position: relative;
+  background-color: #ffffff; /* Solid white base card */
+  -webkit-mask-image:
+    /* Layer 1: The repeating transparent holes on the left */
+    radial-gradient(circle at 16px 20px, transparent 6px, black 6.5px),
+    /* Layer 2: The solid opaque body for the rest of the page */
+    linear-gradient(black, black);
+
+  -webkit-mask-size:
+    32px 40px,
+    /* Hole column: 32px wide, repeating every 40px vertically */
+    calc(100% - 32px) 100%; /* Solid body: takes up the remaining width */
+
+  -webkit-mask-position:
+    left top,
+    /* Pin holes to the left edge */ right top; /* Pin the solid body to the right */
+
+  -webkit-mask-repeat:
+    repeat-y,
+    /* Repeat the holes infinitely down the Y axis */ no-repeat; /* Do not repeat the solid body layer */
+
+  /* Standard properties for broad browser support */
+  mask-image:
+    radial-gradient(circle at 16px 20px, transparent 6px, black 6.5px),
+    linear-gradient(black, black);
+  mask-size:
+    32px 40px,
+    calc(100% - 32px) 100%;
+  mask-position:
+    left top,
+    right top;
+  mask-repeat: repeat-y, no-repeat;
+}
+
+.note-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("/textures/note.webp");
+  background-size: 600px;
+  background-repeat: repeat;
 
   opacity: 0.5;
+  mix-blend-mode: multiply;
 
-  z-index: -2;
+  z-index: 0;
   pointer-events: none;
 }
 
