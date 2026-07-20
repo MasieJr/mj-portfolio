@@ -5,16 +5,12 @@ import SketchyLine from "./SketchyLine";
 import StickyNote from "./StickyNote";
 import {
   ArrowRight,
-  Code,
   CodeXml,
-  Computer,
   Database,
   Download,
   Monitor,
-  Pen,
   Smartphone,
   Star,
-  Terminal,
   TerminalSquare,
 } from "lucide-react";
 import PaperButton from "./PaperButton";
@@ -23,6 +19,36 @@ import IconText from "./IconText";
 import TextHeading from "./TextHeading";
 
 export default function Hero() {
+  const projects = [
+    {
+      id: 1,
+      name: "Film-Process",
+      description:
+        "A full-stack Next.js 15 application for managing commercial film processing orders, customer workflows, and financial reporting",
+      stack: ["NextJs", "PostgreSQL", "Cloudfare"],
+      link: "https://github.com/MasieJr/Film-Processing",
+      image: "",
+    },
+    {
+      id: 2,
+      name: "UniConnect",
+      description:
+        "A university platform designed to help university students with the day to day student life.",
+      stack: ["React", "Flutter", "NodeJS"],
+      link: "https://github.com/MasieJr",
+      image: "",
+    },
+    {
+      id: 3,
+      name: "Car rental Website",
+      description:
+        "A full-stack car rental platform supporting customer bookings, invoice generation, and administrator workflows.",
+      stack: ["React", "NodeJS", "MySql"],
+      link: "https://github.com/MasieJr",
+      image: "",
+    },
+  ];
+
   return (
     <section id="home" className="mt-10 space-y-20 px-4 lg:px-0">
       <div className="flex flex-col lg:flex-row justify-around gap-16 lg:gap-5">
@@ -80,7 +106,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="space-y-16 code-font w-full lg:w-1/3 flex flex-col items-center lg:items-end">
+        <div className="space-y-16 code-font w-full lg:w-1/3 flex flex-col items-center ">
           <StickyNote />
           <div className="handwritten text-center lg:text-right">
             <p className="text-lg">Favourite transport:</p>
@@ -168,6 +194,51 @@ export default function Hero() {
               </ol>
             </div>
           </div>
+        </div>
+      </div>
+      <div>
+        <h2 className="text-2xl sm:text-3xl">
+          <RoughNotation animate={false} type="underline" show={true}>
+            Things I've built:
+          </RoughNotation>
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-5 gap-5">
+          {projects.map((proj) => (
+            <div
+              key={proj.id}
+              className="projects h-[600px] w-[300px] sm:w-[450px] p-5"
+            >
+              <span>{proj.id}</span>
+              <Image
+                src={"/projects/test.webp"}
+                alt={proj.name}
+                width={1000}
+                height={200}
+              />
+              <h3 className="text-2xl sm:text-3xl">
+                <RoughNotation animate={false} type="underline" show={true}>
+                  {proj.name}
+                </RoughNotation>
+              </h3>
+              <div className="code-font text-xl md:text-2xl md:min-h-[180px]">
+                {proj.description}
+              </div>
+              <div className="flex flex-wrap gap-2 items-center justify-around">
+                {proj.stack.map((item) => (
+                  <span key={item} className="bg-[#fffab2] shadow-xs p-1">
+                    {item}
+                  </span>
+                ))}
+              </div>
+              <a
+                className="handwritten text-3xl md:text-4xl"
+                href={proj.link}
+                target="_blank"
+              >
+                View Project
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>

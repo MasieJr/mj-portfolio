@@ -102,6 +102,27 @@ body::after {
   z-index: 0; /* Keep it behind text, but above the main body background */
   pointer-events: none;
 }
+.projects {
+  position: relative; /* Lock the pseudo-element to this specific container */
+  background-color: #fffab242; /* A solid yellow base color (Tailwind yellow-200) */
+}
+
+.projects::before {
+  content: "";
+  position: absolute; /* Absolute instead of fixed so it fills just the note */
+  inset: 0;
+
+  /* Blending the sticky texture with the solid background color */
+  background: url("/textures/grain.webp");
+  background-size: 105%;
+  /* background-repeat: repeat; */
+
+  opacity: 1; /* Adjusted so the texture details pop without overpowering text */
+  mix-blend-mode: multiply; /* Perfect for overlaying paper textures on color */
+
+  z-index: 0; /* Keep it behind text, but above the main body background */
+  pointer-events: none;
+}
 
 /* --- Project Card / Note Page Style --- */
 .note-page {
