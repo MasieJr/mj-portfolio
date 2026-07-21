@@ -28,7 +28,7 @@ export default function Projects() {
         "A full-stack car rental platform supporting customer bookings, invoice generation, and administrator workflows.",
       stack: ["React", "NodeJS", "MySql"],
       link: "https://github.com/MasieJr",
-      image: "",
+      image: "/projects/notfound.webp",
     },
   ];
   return (
