@@ -36,7 +36,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mj-Portifolio",
+  title: "Masie Junior Seremu",
   description: "Personal Website",
 };
 
