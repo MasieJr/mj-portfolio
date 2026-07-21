@@ -3,7 +3,7 @@ import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export default function StickyNote() {
   return (
-    <div className="handwritten bg-[#efdda5] w-[200px] h-[200px] sticky -rotate-5 shadow-xl/50 ">
+    <div className="handwritten bg-[#efdda5] w-[200px] h-[200px] sticky-note -rotate-5 shadow-xl/50 ">
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-4xl">ToDo:</h1>
 

@@ -60,12 +60,12 @@ body::after {
   pointer-events: none;
 }
 
-.sticky {
+.sticky-note {
   position: relative; /* Lock the pseudo-element to this specific container */
   background-color: #fef08a; /* A solid yellow base color (Tailwind yellow-200) */
 }
 
-.sticky::before {
+.sticky-note::before {
   content: "";
   position: absolute; /* Absolute instead of fixed so it fills just the note */
   inset: 0;

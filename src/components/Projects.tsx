@@ -10,7 +10,7 @@ export default function Projects() {
         "A full-stack Next.js 15 application for managing commercial film processing orders, customer workflows, and financial reporting",
       stack: ["NextJs", "PostgreSQL", "Cloudfare"],
       link: "https://github.com/MasieJr/Film-Processing",
-      image: "",
+      image: "/projects/fotofirst.webp",
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ export default function Projects() {
         "A university platform designed to help university students with the day to day student life.",
       stack: ["React", "Flutter", "NodeJS"],
       link: "https://github.com/MasieJr",
-      image: "",
+      image: "/projects/uniconnect.webp",
     },
     {
       id: 3,
@@ -32,25 +32,25 @@ export default function Projects() {
     },
   ];
   return (
-    <div>
+    <section id="projects">
       <h2 className="text-2xl sm:text-3xl">
         <RoughNotation animate={false} type="underline" show={true}>
           Things I've built:
         </RoughNotation>
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-5 gap-5">
+      <div className="flex flex-wrap justify-center mt-5 gap-6">
         {projects.map((proj) => (
           <div
             key={proj.id}
 
-            className="projects flex flex-col h-[600px] w-full p-5"
+            className="projects flex flex-col w-full sm:w-[350px] flex-grow max-w-[450px] p-5 text-center"
           >
             <span>{proj.id}</span>
 
             <div className="w-full relative h-[200px] shrink-0">
               <Image
-                src={"/projects/test.webp"}
+                src={proj.image}
                 alt={proj.name}
                 fill
                 className="object-cover"
@@ -63,11 +63,11 @@ export default function Projects() {
               </RoughNotation>
             </h3>
 
-            <div className="code-font text-xl md:text-2xl mt-2 flex-grow">
+            <div className="code-font text-xl md:text-2xl mt-4 flex-grow">
               {proj.description}
             </div>
 
-            <div className="flex flex-wrap gap-4 items-center justify-center my-4">
+            <div className="flex flex-wrap gap-4 items-center justify-center my-6">
               {proj.stack.map((item) => (
                 <span
                   key={item}
@@ -79,7 +79,7 @@ export default function Projects() {
             </div>
 
             <a
-              className="handwritten text-3xl md:text-4xl text-center"
+              className="handwritten text-3xl md:text-4xl text-center mt-auto"
               href={proj.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -91,6 +91,6 @@ export default function Projects() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

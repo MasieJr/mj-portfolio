@@ -15,7 +15,7 @@ export default function About() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8">
       {/* Left Column: Tech Stack */}
-      <div className="space-y-5 w-full">
+      <section id="skills" className="space-y-5 w-full">
         <TextHeading heading="What I enjoy building with:" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
@@ -46,10 +46,10 @@ export default function About() {
           />
           <IconText label="Other" list="Cloudflare, Vercel" icon={Star} />
         </div>
-      </div>
+      </section>
 
       {/* Right Column: About Me */}
-      <div className="space-y-5 w-full flex flex-col">
+      <section id="about" className="space-y-5 w-full flex flex-col">
         <TextHeading heading="A little about me" />
         <p className="code-font text-lg lg:text-xl">
           I am a soon-to-be computer science graduate who loves solving
@@ -70,7 +70,7 @@ export default function About() {
 
           <PaperNote />
         </div>
-      </div>
+      </section>
     </div>
   );
 }
