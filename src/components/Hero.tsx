@@ -54,7 +54,11 @@ export default function Hero() {
             onClick={() => {}}
             icon={ArrowRight}
           />
-          <PaperButton label="Download CV" onClick={() => {}} icon={Download} />
+          <PaperButton
+            label="Download CV"
+            onClick={() => window.open("/documents/mj.pdf", "_blank")}
+            icon={Download}
+          />
           <PaperButton
             label="Get In Touch"
             onClick={() => {}}
