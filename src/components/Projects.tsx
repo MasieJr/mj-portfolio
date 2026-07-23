@@ -25,7 +25,7 @@ export default function Projects() {
       id: 3,
       name: "African Logistics",
       description:
-        "A full-stack gaming-community website showing information abiut the VTC - African Logistics.",
+        "A full-stack gaming-community website showing information about the VTC - African Logistics.",
       stack: ["NextJS", "API", "Prisma"],
       link: "https://africanlogistics.co.za",
       image: "/projects/alvtc.webp",

@@ -36,8 +36,15 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Masie Junior Seremu",
-  description: "Personal Website",
+  title: "Masie Junior Seremu | Software Engineer",
+  description:
+    "Full-stack software developer specializing in React, Next.js, and mobile applications.",
+  openGraph: {
+    title: "Masie Junior Seremu",
+    description: "Welcome to my digital portfolio.",
+    url: "https://masieseremu.co.za",
+    siteName: "Masie Junior Seremu",
+  },
 };
 
 export default function RootLayout({
