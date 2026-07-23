@@ -55,22 +55,18 @@ const tabs = [
 export default function Sidebar() {
   const [activeTab, setActiveTab] = useState("#home");
 
-  // Handle scroll detection
   useEffect(() => {
     const handleScroll = () => {
-      // Find all the DOM sections that correspond to our tab IDs
       const sectionElements = tabs
         .map((tab) => document.querySelector(tab.id))
         .filter((el) => el !== null);
 
       let currentActiveId = activeTab;
 
-      // Loop backwards to find the lowest section currently scrolled into view
       for (let i = sectionElements.length - 1; i >= 0; i--) {
         const section = sectionElements[i];
         const rect = section.getBoundingClientRect();
 
-        // If the top of the section is at or above a 150px threshold from the top
         if (rect.top <= 150) {
           currentActiveId = tabs[i].id;
           break;
@@ -82,17 +78,14 @@ export default function Sidebar() {
       }
     };
 
-    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Trigger once on mount to set initial state correctly
     handleScroll();
 
-    // Cleanup listener on unmount
     return () => window.removeEventListener("scroll", handleScroll);
   }, [activeTab]);
   return (
-    <div className=" w-[300px] h-screen sticky top-0 hidden md:flex flex-col pt-16 pb-10 shadow-[10px_0_15px_-5px_rgba(0,0,0,0.3)]">
+    <div className=" w-[300px] h-screen sticky top-0 hidden md:flex flex-col pt-10  shadow-[10px_0_15px_-5px_rgba(0,0,0,0.3)]">
       {/* Header Section */}
       <div className="px-10">
         <h1 className="handwritten text-7xl text-gray-900 leading-none">
@@ -103,12 +96,10 @@ export default function Sidebar() {
         </p>
       </div>
 
-      {/* Divider */}
       <div className="my-8 px-10">
         <SketchyLine className="w-full h-[4px] text-[#e9420b] opacity-50" />
       </div>
 
-      {/* Navigation Loop */}
       <nav className="flex flex-col gap-8 px-10 mt-4">
         {tabs.map((tab) => {
           const isActive = activeTab === tab.id;
@@ -117,7 +108,7 @@ export default function Sidebar() {
             <a
               key={tab.id}
               href={tab.id}
-              onClick={() => setActiveTab(tab.id)} // Instantly update active state on click
+              onClick={() => setActiveTab(tab.id)}
               className="flex items-start gap-4 group cursor-pointer"
             >
               <div
@@ -142,7 +133,6 @@ export default function Sidebar() {
                     {tab.label}
                   </span>
 
-                  {/* Render underline only if active */}
                   {isActive && (
                     <SketchyLine className="absolute -bottom-1 left-0 w-full h-[6px] text-[#e9420b] -z-10" />
                   )}
@@ -155,8 +145,6 @@ export default function Sidebar() {
             </a>
           );
         })}
-
-        {/* <StickyNote /> */}
 
         <div className="space-y-3">
           <div className="flex flex-row items-center space-x-3">

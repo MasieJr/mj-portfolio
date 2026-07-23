@@ -12,22 +12,33 @@ export default function StickyNote() {
             <li>
               <RoughNotation
                 animationDuration={1000}
-                type="highlight"
-                color="#f8a1a1"
+                type="strike-through"
+                color="#ff0000"
+                strokeWidth={2}
               >
                 study
               </RoughNotation>
             </li>
             <li>
               <RoughNotation
-                type="highlight"
+                type="strike-through"
                 animationDuration={1000}
-                color="#f8a1a1"
+                color="#ff0000"
+                strokeWidth={2}
               >
                 Pass
               </RoughNotation>
             </li>
-            <li>Graduate</li>
+
+            <li>
+              <RoughNotation
+                type="box"
+                animationDuration={1000}
+                color="#3700ff"
+              >
+                Graduate
+              </RoughNotation>
+            </li>
             <li>Get A job</li>
             <li>Drink coffee</li>
           </ul>
