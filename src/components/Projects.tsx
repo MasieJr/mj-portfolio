@@ -23,12 +23,12 @@ export default function Projects() {
     },
     {
       id: 3,
-      name: "Car rental Website",
+      name: "African Logistics",
       description:
-        "A full-stack car rental platform supporting customer bookings, invoice generation, and administrator workflows.",
-      stack: ["React", "NodeJS", "MySql"],
-      link: "https://github.com/MasieJr",
-      image: "",
+        "A full-stack gaming-community website showing information abiut the VTC - African Logistics.",
+      stack: ["NextJS", "API", "Prisma"],
+      link: "https://africanlogistics.co.za",
+      image: "/projects/alvtc.webp",
     },
   ];
   return (
