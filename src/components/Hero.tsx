@@ -84,7 +84,8 @@ export default function Hero() {
             alt="train"
             width={200}
             height={200}
-            className="mt-4"
+            loading="eager"
+            className="mt-4 w-auto h-auto"
           />
         </div>
       </div>

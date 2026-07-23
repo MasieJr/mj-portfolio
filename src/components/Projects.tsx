@@ -9,7 +9,7 @@ export default function Projects() {
       description:
         "A full-stack Next.js 15 application for managing commercial film processing orders, customer workflows, and financial reporting",
       stack: ["NextJs", "PostgreSQL", "Cloudfare"],
-      link: "https://github.com/MasieJr/Film-Processing",
+      link: "https://film-process.masieseremu.co.za",
       image: "/projects/fotofirst.webp",
     },
     {
@@ -46,13 +46,14 @@ export default function Projects() {
 
             className="projects flex flex-col w-full sm:w-[350px] flex-grow max-w-[450px] p-5 text-center"
           >
-            <span>{proj.id}</span>
+            <span className="handwritten text-2xl">{proj.id}</span>
 
             <div className="w-full relative h-[200px] shrink-0">
               <Image
                 src={proj.image}
                 alt={proj.name}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover"
               />
             </div>
