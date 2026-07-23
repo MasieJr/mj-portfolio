@@ -7,46 +7,59 @@ export default function Projects() {
       id: 1,
       name: "Film-Process",
       description:
-        "A full-stack Next.js 15 application for managing commercial film processing orders, customer workflows, and financial reporting",
-      stack: ["NextJs", "PostgreSQL", "Cloudfare"],
+        "A full-stack Next.js 15 application for managing commercial film processing orders, customer workflows, and financial reporting.",
+      stack: ["Next.js", "PostgreSQL", "Cloudflare"],
       link: "https://film-process.masieseremu.co.za",
       image: "/projects/fotofirst.webp",
+      colour: "#008404",
     },
     {
       id: 2,
       name: "UniConnect",
       description:
-        "A university platform designed to help university students with the day to day student life.",
-      stack: ["React", "Flutter", "NodeJS"],
+        "A university platform designed to help university students with day-to-day student life.",
+      stack: ["React", "Flutter", "Node.js"],
       link: "https://github.com/MasieJr",
       image: "/projects/uniconnect.webp",
+      colour: "#00e5ff",
     },
     {
       id: 3,
       name: "African Logistics",
       description:
         "A full-stack gaming-community website showing information about the VTC - African Logistics.",
-      stack: ["NextJS", "API", "Prisma"],
+      stack: ["Next.js", "API", "Prisma"],
       link: "https://africanlogistics.co.za",
       image: "/projects/alvtc.webp",
+      colour: "#ff7700",
     },
   ];
+
   return (
     <section id="projects">
-      <h2 className="text-2xl sm:text-3xl">
+      <h2 className="text-2xl sm:text-3xl ">
         <RoughNotation animate={false} type="underline" show={true}>
           Things I've built:
         </RoughNotation>
       </h2>
 
-      <div className="flex flex-wrap justify-center mt-5 gap-6">
+      <div className="relative flex flex-wrap justify-center mt-5 gap-10 ">
         {projects.map((proj) => (
           <div
             key={proj.id}
-
-            className="projects flex flex-col w-full sm:w-[350px] flex-grow max-w-[450px] p-5 text-center"
+            style={{ color: proj.colour }}
+            className="projects flex flex-col w-full sm:w-[350px] flex-grow max-w-[450px] p-6 mb-5 text-center shadow-xl/30"
           >
-            <span className="handwritten text-2xl">{proj.id}</span>
+            <span className="handwritten text-4xl mb-6">
+              <RoughNotation
+                animate={false}
+                type="circle"
+                show={true}
+                padding={10}
+              >
+                {proj.id}
+              </RoughNotation>
+            </span>
 
             <div className="w-full relative h-[200px] shrink-0">
               <Image
@@ -64,7 +77,7 @@ export default function Projects() {
               </RoughNotation>
             </h3>
 
-            <div className="code-font text-xl md:text-2xl mt-4 flex-grow">
+            <div className="code-font text-xl md:text-2xl mt-4 flex-grow text-gray-800">
               {proj.description}
             </div>
 
@@ -89,6 +102,13 @@ export default function Projects() {
                 View Project
               </RoughNotation>
             </a>
+            <Image
+              src={"/doodles/clip.svg"}
+              alt="PaperClip"
+              width={80}
+              height={100}
+              className="absolute -top-5 right-1 -rotate-30 h-auto w-[80px]"
+            />
           </div>
         ))}
       </div>

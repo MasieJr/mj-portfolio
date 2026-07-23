@@ -51,7 +51,7 @@ export default function Hero() {
         <div className="flex flex-wrap gap-4 mt-24">
           <PaperButton
             label="View My work"
-            onClick={() => {}}
+            onClick={() => window.open("https://github.com/MasieJr", "_blank")}
             icon={ArrowRight}
           />
           <PaperButton
@@ -59,11 +59,11 @@ export default function Hero() {
             onClick={() => window.open("/documents/mj.pdf", "_blank")}
             icon={Download}
           />
-          <PaperButton
+          {/* <PaperButton
             label="Get In Touch"
             onClick={() => {}}
             icon={ArrowRight}
-          />
+          /> */}
         </div>
       </div>
 
