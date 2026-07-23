@@ -6,7 +6,7 @@ A retro, paper-themed personal portfolio website built to showcase my software e
 
 *   **Framework:** [Next.js](https://nextjs.org/)
 *   **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
-*   **Deployment:** [e.g., Vercel / Netlify - *Update as needed*]
+*   **Deployment:** [Vercel](https://vercel.com)
 
 ## ✨ Features
 
