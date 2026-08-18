@@ -29,7 +29,7 @@ export default function Projects() {
       description:
         "A full-stack gaming-community website showing information about the VTC - African Logistics.",
       stack: ["Next.js", "API", "Prisma"],
-      link: "https://africanlogistics.co.za",
+      link: "https://africanlogisticsvtc.co.za",
       image: "/projects/alvtc.webp",
       colour: "#ff7700",
     },

@@ -32,7 +32,7 @@ export default function StickyNote() {
 
             <li>
               <RoughNotation
-                type="box"
+                type="underline"
                 animationDuration={1000}
                 color="#3700ff"
               >
