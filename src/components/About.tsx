@@ -52,9 +52,11 @@ export default function About() {
       <section id="about" className="space-y-5 w-full flex flex-col">
         <TextHeading heading="A little about me" />
         <p className="code-font text-lg lg:text-xl">
-          I am a soon-to-be computer science graduate who loves solving
-          problems, building products, and learning new technologies. I enjoy
-          turning ideas into real-world solutions that make a difference.
+          I am a Computer Science graduate who loves solving problems, building
+          products, and learning new technologies. I enjoy turning ideas into
+          real-world solutions that make a difference. I am particularly
+          interested in mobile app development, understanding how applications
+          work under the hood, networking, and building secure software.
         </p>
 
         <div className="flex flex-wrap sm:flex-row justify-around items-center mt-auto pt-10 gap-5 sm:gap-0">
